@@ -84,15 +84,19 @@ ANT = {
     '51600': 1600,
     '51600S': 1600,
     'SS MINI': 1600,
+    'SS_MINI': 1600,  # Added to support underscore variant
     '4105NR': 2000,
     '42000S': 2000,
     '62000': 2000,
     '62000-003': 2000,
     '62300': 2300,
     '62300XT': 2300,
+    'PALM XT': 2300,  # Added to support Palm XT antenna
+    'PALM_XT': 2300,  # Added to support Palm XT antenna with underscore
     '52600': 2600,
     '52600S': 2600,
     'SSMINIXT': 2700,
+    'SS_MINI_XT': 2700,  # Added to support underscore variant
 }
 
 # whether or not the file is GPS-enabled (does not guarantee presence of GPS data in file)

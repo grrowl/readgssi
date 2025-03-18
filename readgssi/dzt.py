@@ -204,7 +204,8 @@ def readdzt(infile, gps=DataFrame(), spm=None, start_scan=0, num_scans=-1,
         else:
             infile.seek(98 + (MINHEADSIZE*(chan))) # start of antenna bytes for channel n
         header['dzt_ant'][chan] = infile.read(14)
-        header['rh_ant'][chan] = header['dzt_ant'][chan].decode('utf-8').split('\x00')[0]
+        # Decode and clean antenna name - remove null chars and strip any trailing whitespace or newlines
+        header['rh_ant'][chan] = header['dzt_ant'][chan].decode('utf-8').split('\x00')[0].strip()
         header['rh_antname'][chan] = header['rh_ant'][chan].rsplit('x')[0]
         try:
             header['antfreq'][chan] = ANT[header['rh_antname'][chan]]

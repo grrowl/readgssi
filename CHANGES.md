@@ -1,5 +1,11 @@
 # Changelog
 
+## changes since 0.0.22
+- improved antenna frequency detection:
+  - added support for "SS_MINI" (with underscore) and "SS_MINI_XT" antennas
+  - added support for "PALM XT" and "PALM_XT" antennas
+  - enhanced antenna name processing to handle trailing whitespace and newlines
+
 ## changes since 0.0.21
 - updated documentation
 - fixed [#42](https://github.com/iannesbitt/readgssi/issues/42)
